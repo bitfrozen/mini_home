@@ -35,7 +35,7 @@ fonts-noto-color-emoji
 fonts-opensymbol
 fonts-symbola
 fonts-ubuntu
-fuse
+fuse3
 fwupd
 fwupd-signed
 g++
@@ -45,8 +45,7 @@ git-gui
 gitk
 gnome-keyring
 google-chrome-stable
-grub-efi
-grub-efi-amd64-signed
+grub-pc
 jq
 logrotate
 lsof
@@ -58,6 +57,7 @@ net-tools
 network-manager-gnome
 openssh-client
 openssh-server
+open-vm-tools-desktop
 p7zip-full
 parted
 patch
