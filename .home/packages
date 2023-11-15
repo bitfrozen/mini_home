@@ -6,6 +6,7 @@ lsof
 openssh-client
 openssh-server
 open-vm-tools-desktop
+shellcheck
 smbclient
 sudo
 tcpdump
