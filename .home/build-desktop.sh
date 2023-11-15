@@ -3,8 +3,15 @@ set -x -e
 apt update
 apt install -y ca-certificates curl gnupg2
 rm -rf /etc/apt/sources.list.d/*
-echo 'deb https://download.docker.com/linux/ubuntu jammy stable' >> /etc/apt/sources.list
+{
+  echo 'deb http://se.archive.ubuntu.com/ubuntu jammy main universe restricted'
+  echo 'deb http://se.archive.ubuntu.com/ubuntu jammy-updates main universe restricted'
+  echo 'deb http://se.archive.ubuntu.com/ubuntu jammy-security main universe restricted'
+  echo 'deb http://se.archive.ubuntu.com/ubuntu jammy-backports main universe restricted'
+  echo 'deb https://download.docker.com/linux/ubuntu jammy stable'
+} > /etc/apt/sources.list
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+add-apt-repository -y ppa:ansible/ansible
 
 export DEBIAN_FRONTEND=noninteractive
 
